@@ -19,18 +19,22 @@ Project structure
 *   .
 
     Directory should contain main.cc with main() function.
+
 *   inc/
 
     Directory containing *.h files
+
 *   src/
 
     Directory containing *.cc files.
+
 *   tests/
 
     Directory containing *_test.cc files for testing of classes.
-    > these files should have `#include "gtest/gtest.h"` directive and are by
-    > default linked with gtest_main, so that you do not have to specify a special
-    > main() function for tests.
+    These files should have `#include "gtest/gtest.h"` directive and are by
+    default linked with gtest_main, so that you do not have to specify a special
+    main() function for tests.
+
 *   bin/
 
     Directory containing binaries, generated with make.
