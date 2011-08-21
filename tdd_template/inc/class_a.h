@@ -6,7 +6,8 @@ class ClassA
  public:
   ClassA();
   virtual ~ClassA();
-  int ReturnOne();
+  virtual int ReturnOne();
+  virtual int IsCalled();
 };
 
 

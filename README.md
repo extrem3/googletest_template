@@ -1,7 +1,8 @@
 About
 -----
 This is directory skeleton for writing c++ applications with help of
-googletest (so, with [tdd](http://en.wikipedia.org/wiki/Test-driven_development) in mind).
+googletest and googlemock (so, with 
+[tdd](http://en.wikipedia.org/wiki/Test-driven_development) in mind).
 
 How-to
 ------
