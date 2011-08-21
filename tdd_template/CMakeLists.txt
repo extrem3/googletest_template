@@ -44,15 +44,15 @@ cxx_library(gtest_main "${cxx_strict}" ${GTEST_SRC}/src/gtest_main.cc)
 cxx_library(gmock "${cxx_strict}" ${GMOCK_SRC}/src/gmock-all.cc)
 target_link_libraries(gtest_main gtest gmock)
 
-# Tell CMake about the libraries
+# Tell CMake about source files
 file(GLOB tests_SRC
   "tests/*.cc"
 )
 file(GLOB files_SRC
   "src/*.cc"
 )
-list(LENGTH files_SRC number_of_includes)
 
+list(LENGTH files_SRC number_of_includes)
 if(number_of_includes GREATER 0)
   add_executable(tests ${tests_SRC} ${files_SRC})
   target_link_libraries(tests gtest_main)
