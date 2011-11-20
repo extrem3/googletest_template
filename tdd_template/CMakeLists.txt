@@ -26,6 +26,9 @@ set(VERSION "${VER_MAJOR}.${VER_MINOR}.${VER_PATCH}")
 # So we can build outside of the main directory
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/inc ${CMAKE_CURRENT_SOURCE_DIR})
 
+file(GLOB files_INC
+  "inc/*.h"
+)
 file(GLOB files_SRC
   "src/*.cc"
 )
@@ -58,7 +61,7 @@ file(GLOB tests_SRC
   "tests/*.cc"
 )
 
-list(LENGTH files_SRC number_of_includes)
+list(LENGTH files_INC number_of_includes)
 if(number_of_includes GREATER 0)
   add_executable(tests ${tests_SRC} ${files_SRC})
   target_link_libraries(tests gtest_main)
